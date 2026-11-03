@@ -1,0 +1,106 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+        <title>report</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADRUlEQVR42u2XP2gbdxTHP++n08myYteOI1t2heMG4jYBu0NbSpb+oXsRJFO6dCyd4pDBW9rNgRIv7dYxmKSDMe0Y6FBoqbMU7MUtTQIOSJYlS26cSNbpdK+DfucKx4qDcaQOefDj4Hd37/d57+539/0KxxiZzDKAAFEgDvQDp4Fp4AyQBsbssQBcdF40ua6OhckdmzwBDACDRPzhP9beS80teKOe76aAESAJnLRjAHD3paxhkx1UgWsXOWFvTl663piavTx37t1z914nMGHy14AEKj1u1HOQ59cA+IABIuGkM7O+Egc+kQhnd5YbqcItb4SAEeCUXaQPSCjS4/muaeZpGzVgGygBW7bNG0DOjiIwA3ywBwAMATdQzotzSAVKDagCO3ahLWATlWzUqW8YCR6qypqI5oEnFshvyeEAn7FvAtsWEAJ7U8VW8SdwP6yi6sXzmKBAECkDj+11NdQ0JtN/cfuHD9vSX7r464HzezWrQixtfjcuXwVV8ghlC1EBdHHxAouLR98hs5fnng+AgjMk2Ymb8Z8JaNxMTx/nDuWdt+4dAhBy+Ie8y0eNwLwYwMuKshlpAyCdAfg28c3BAKWlekcASu068M9dvyMA0uYD5qgRuhlOIva0uwDXP//6wBMLdzoEMDm+1t0OtPtAdCq6u/orgFcA/weAZ3/HEV9R6QKAKJul1OiV7+Y/ruz25jMZDSVZFdClpfdfNkDA/dyZC17d/VFEn1rFG4rSbCaznAM2rbQuo+y4aVMZuxbz5iemGlcfrTI/Pn1kgKApTMUoErem5BTwZquoAjwrUndQtiN9FFEKVx+t5oDczPrKQ2DNgj7ZfRDUfvtou/FGJo44TcujDf6zFtoE2AJmEZ2s+9HQVrUakxPWhvW0jJMKp3n2V16zj62EUNz9OyhMfBrPA9kHX1Y3JEox9UUs6SQF44I4giNT2SrwU9OaXQl3RhTota5owAK9bTuSApIoQyL0IySAmO1mDBgFRhGgQaviU61Tz3/vRUwvmLhgYvt2gX3RQnNSA8rAuvWNd1ucbw8BfRJjwHYpacFSFmAYGNZAB4HBFnPqBhUlqFgjAscrSWfWV/bsuUTpLS7U+x//4o8j7e35v4fNFn11zSTmAAAAAElFTkSuQmCC"/>
+        <style type="text/css"> {% include "./css/fontello-323401c3/css/fontello-embedded.css" %} </style> 
+        <script> {% include "./js/jquery.min.js" %} </script>
+        <script> {% include "./js/plotly-2.12.1.min.js" %} </script>
+
+        
+        <script type="text/javascript">
+            
+            function toggle1(node){
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    var child = node.childNodes[i];
+                    if (child.className == "description") {
+                        help_node = child;
+                        if (help_node.style.display=="inline"){
+                            help_node.style.display="none";
+                        } else {
+                            help_node.style.display="inline";
+                        }
+                    }
+                toggle1(child);
+                }
+            }
+
+
+        </script>
+        
+        <style>
+            .box {
+                margin-top: 2px;
+                margin-bottom: 2px;
+                width: 100%;
+                background-color: rgba(255,255,255,0.5);
+                padding: 15px 14px;
+                border-radius: 5px;
+                border: 1px solid rgba(0,0,0,0.1);
+  
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 1%;
+                border-spacing: 0 2em;
+            }
+
+            th, td {
+                border-bottom: 1px solid #ddd;
+                
+            }
+
+            .box table td:first-child{
+                text-align: left;
+                padding-bottom: 5px;
+            }
+
+            .box table td{
+                text-align: right;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            .logo_container {
+                height: 50px;
+                width: 150px;
+                position: relative;
+            }
+            .description {
+                margin-top: 5px;
+            }
+            .description p{
+                text-align: left;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                line-height: 28px !important;
+                font-size: 18px !important;
+            }
+            .has_desc:after {
+                position: relative;
+                background: rgba(0,0,0,0.1);
+                color: white;
+                width: 18px;
+                height: 18px;
+                border-radius: 18px;
+                cursor: pointer;
+                float: right;
+                text-align: center;
+                line-height: 20px;
+                content: '?';
+            }
+
+            .clear{ clear:both}
+
+            .js-plotly-plot .plotly .modebar {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                z-index: 1001;
+                background: rgba(255, 255, 255, 0.7) none repeat scroll 0% 0%;
+            }
+
+        </style>
+</head>
