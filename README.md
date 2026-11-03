@@ -2,7 +2,7 @@
 
 Spatial transcriptomics analysis from sequencing reads to expression matrices, spatial maps, and HTML reports.
 
-**v1.8.0** is the current development and source release on this branch. It adds a unified command-line interface, ST/SX/SN workflow selection, input checks and resumable runs, reanalysis from existing count outputs, and optional StarDist cell segmentation. The [v1.7.0 branch](https://github.com/seekgene/SeekcoordTools/tree/v1.7.0) remains available for users of the previous workflow.
+**v1.8.0** is the current development and source release on this branch. It adds a unified command-line interface, ST/SX/SN workflow selection, input checks and resumable runs, reanalysis from existing count outputs, and optional StarDist cell segmentation.
 
 > **Download status:** The [v1.8.0 GitHub Release](https://github.com/seekgene/SeekcoordTools/releases/tag/v1.8.0) currently contains GitHub-generated source archives only. The Linux deployment bundle `seekcoord-v1.8.0-linux-x86_64.tar.gz` has not yet been attached. The source archives do not include the bundled models or installer layout described below.
 
